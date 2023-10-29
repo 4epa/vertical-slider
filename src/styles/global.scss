@@ -1,0 +1,55 @@
+@function rem($size) {
+  @return calc($size / 16) * 1rem;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  background-color: #333333;
+  font-family: "Noto Sans";
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+.title {
+  font-size: rem(26);
+  font-weight: 700;
+
+  @media (max-width: 430px) {
+    font-size: rem(24);
+  }
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: rem(1140);
+  padding: 0px 15px;
+  margin: 0 auto;
+  min-height: 100%;
+
+  @media (max-width: 600px) {
+    padding: 0px;
+  }
+}
+
+.image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+
+  &--cover {
+    object-fit: cover;
+  }
+
+  &--contain {
+    object-fit: contain;
+  }
+}
